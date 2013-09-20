@@ -1,0 +1,13 @@
+git help HELP PAGE
+git help log
+
+INITIALIZE GIT
+cd c:\git_project GOTO DIR
+git init
+TO REMOVE GIT CAN DELETE .git DIR FROM PATH
+
+ls GET FILES
+ls -la GET FILE INFO
+
+git .add ADD ERVERY CHANGE IN DIR
+git commit -m "Initial Commit"
