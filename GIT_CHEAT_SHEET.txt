@@ -1,5 +1,32 @@
-git help HELP PAGE
+http://git-scm.com/ GET GIT
+
+GIT Commands
+-------------------
+
+ls -la GIT DIR CONTENTS
+which git SHOWS GIT DIR PATH
+git --version SHOWS VERSION
+
+
+CONFIG FILE PATHS
+SYSTEM (git config --system)
+/etc/gitconfig
+Program Files\Git\etc\gitconfig
+USER (git config --global)
+~/.gitconfig
+$HOME\.gitconfig
+PROJECT (git config)
+my_project/.git/config
+
+git config --global user.name "nme"
+git config --global user.email "e@c"
+cat .gitconfig SHOWS CONFIG
+
+
+HELP
+git help
 git help log
+
 
 INITIALIZE GIT
 cd c:\git_project GOTO DIR
@@ -18,9 +45,22 @@ git log LISTS LOG
 git log -n 10 BRINGS BACK 10 CHANGES
 git log --since=2013-07-18 BRINGS BACK DATES
 git log --author="Julian"
-git log --grep="BUGFIX" BRINGS BACK ALL CHANGES THAT HAVE BUGFIX (RELATED TO DEVELOP SHORTHAND BELOW)
+git log --grep="BUGFIX" BRINGS BACK ALL CHANGES THAT HAVE BUGFIX IF U HAVE DEVELOPED A SHORTHAND SYSTEM
 
 
+REMOTE REPOSITORY
+git remote SHOWS WHAT REMOTE REPOSITORYS UR LOCAL GIT KNOWS ABOUT
+git remote add public_project https://github.com/japaquin/public_project.git THE public_project IS AN ALIAS
+git remote -v GIVE MORE INFO
+cat .git/config TO SHOW THE DETAILS OF WHAT YOU JUST ADDED
+
+SEE BRANCHES
+git branch SHOW LOCAL
+git branch -r SHOW REMORTE
+git branch -a SHOW ALL REMOTE AND LOCAL
+
+CLONE
+git clone https://github.com/whitmer/edu_apps.git git_edu_apps
 
 
 GOOD PRACTICE GUIDELINES
@@ -39,4 +79,3 @@ BUGFIX:
 "TICKET NUMBER 72447 FIXES THE LOGIN PROBLEM BY ADDING A BOOL ..."
 BAD "FIXED TYPO"
 GOOD "ADD MISSING > IN PROJECT SECTION OF HTML"
-
