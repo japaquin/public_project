@@ -54,6 +54,11 @@ git remote add public_project https://github.com/japaquin/public_project.git THE
 git remote -v GIVE MORE INFO
 cat .git/config TO SHOW THE DETAILS OF WHAT YOU JUST ADDED
 
+git add .
+git commit -m "comment"
+git push -u public_project master
+
+
 SEE BRANCHES
 git branch SHOW LOCAL
 git branch -r SHOW REMORTE
