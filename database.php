@@ -17,7 +17,7 @@ class database_my_sql
 	/*
 		NAME: construct
 		DESCRIPTION:  construtor function that initializes the database connection in the class
-		INPUT: server location, user name, password
+		INPUT: none
 		OUTPUT:  none
 	*/
 	function __construct()
@@ -25,11 +25,21 @@ class database_my_sql
 		$connection = $database->open_connection();
 	}
 	
+	function __construct()
+	{
+		$connection = $database->open_connection();
+	}
+	
+	function __destruct()
+	{
+		$connection = $database->connection_close();
+	}
+	
 	/*
 		NAME: connection_open
 		DESCRIPTION:  opens the connection to the database and sets/opens the class $connection
 		INPUT: none
-		OUTPUT:  none
+		OUTPUT:  if the connection fails die will return a message
 	*/
 	public function connection_open()
 	{
@@ -40,14 +50,14 @@ class database_my_sql
 			
 		$select = mysql_select_db(MYSQL_NAME_OF_DB, $this->connection);
 		if(!$select)
-			die("MySQL selection error - " . mysql_error());
+			die("MySQL selection error - " . mysql_error());  // die if there is a database selection probelm
 	}
 	
 	/*
 		NAME: connection_close
 		DESCRIPTION:  close the database connection and perform any clean up.
 		INPUT: none
-		OUTPUT:  void
+		OUTPUT:  none
 	*/
 	public function connection_close()
 	{
